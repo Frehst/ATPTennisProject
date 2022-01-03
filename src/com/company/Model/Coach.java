@@ -150,7 +150,7 @@ public class Coach extends DatabaseConnection {
             ResultSet resultSet = statement.executeQuery(QUERY);
             while (resultSet.next()) {
                 // Retrieve by column name
-                System.out.println(resultSet.getString("CoachName") + " " + resultSet.getString("CoachSurname"));
+                System.out.println(resultSet.getInt("CoachID") + " " + resultSet.getString("CoachName") + " " + resultSet.getString("CoachSurname"));
             }
 
         } catch (SQLException e) {
